@@ -1,0 +1,39 @@
+//{ Driver Code Starts
+#include<bits/stdc++.h> 
+using namespace std;
+
+// } Driver Code Ends
+class Solution{
+public:
+    int kthDigit(int A,int B,int K){
+        long long I = pow(A,B);
+        int i = 1;
+        while(I > 0){
+            int a = I % 10;
+            if(K == i){
+                return a;
+            }
+            i++;
+            I = I / 10;
+        }
+        return 0;
+    }
+};
+
+//{ Driver Code Starts.
+int main() 
+{ 
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        long long int A,B,K;
+        cin>>A>>B>>K;
+        Solution ob;
+        cout << ob.kthDigit(A,B,K) << endl;
+    
+cout << "~" << "\n";
+}
+    return 0; 
+}
+// } Driver Code Ends
