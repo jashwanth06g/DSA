@@ -1,0 +1,42 @@
+//{ Driver Code Starts
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+// } Driver Code Ends
+
+
+class Solution{
+	public:
+   	int corner_digitSum(int n){
+   	    int a, l;
+   	    if (n < 10){
+   	        return n;
+   	    }
+   	    a = n % 10; 
+   	    while(n >= 10){
+   	        n = n / 10;
+   	    }
+   	    l = n;
+   	    return a + l;
+   	    }
+
+};
+
+//{ Driver Code Starts.
+int main(){
+	int tc;
+	cin >> tc;
+	while(tc--){
+		int n;
+		cin >> n;
+		Solution ob;
+		int ans = ob.corner_digitSum(n);
+		cout << ans <<"\n";
+	
+cout << "~" << "\n";
+}  
+	return 0;
+}
+// } Driver Code Ends
